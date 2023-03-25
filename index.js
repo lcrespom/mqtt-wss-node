@@ -6,12 +6,6 @@ const topic = '/nodejs/mqtt'
 const clientId = `mqtt_${Math.random().toString(36).slice(2)}`
 const connectUrl = `mqtt://${host}:${port}`
 
-if (argv[2] == 'listen') {
-	listen()
-} else if (argv[2] == 'post') {
-	post(argv[3])
-}
-
 function connect() {
 	return mqtt.connect(connectUrl, {
 		clientId,
@@ -28,7 +22,7 @@ function listen() {
 	client.on('connect', () => {
 		console.log('Connected')
 		client.subscribe([topic], () => {
-			console.log(`Subscribe to topic '${topic}'`)
+			console.log(`Subscribed to topic '${topic}'`)
 		})
 	})
 	client.on('message', (topic, payload) => {
@@ -49,4 +43,12 @@ function post(msg) {
 			else console.log('Message posted')
 		})
 	})
+}
+
+if (process.argv[2] == 'listen') {
+	listen()
+} else if (process.argv[2] == 'post') {
+	post(process.argv[3])
+} else {
+	console.error('Missing parameter')
 }
