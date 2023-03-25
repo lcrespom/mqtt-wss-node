@@ -50,5 +50,5 @@ if (process.argv[2] == 'listen') {
 } else if (process.argv[2] == 'post') {
 	post(process.argv[3])
 } else {
-	console.error('Missing parameter')
+	console.error('Incorrect parameters')
 }
