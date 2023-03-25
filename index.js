@@ -1,7 +1,7 @@
 const mqtt = require('mqtt')
 
 const connectUrl = `mqtt://test.mosquitto.org`
-const topic = '/nodejs/mqtt'
+const topic = '/luis/test'
 
 function connect() {
 	console.log('Tring to connect to ' + connectUrl)
