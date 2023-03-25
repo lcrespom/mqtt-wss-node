@@ -4,7 +4,7 @@ const connectUrl = `mqtt://test.mosquitto.org`
 const topic = '/luis/test'
 
 function connect() {
-	console.log('Tring to connect to ' + connectUrl)
+	console.log('Trying to connect to ' + connectUrl)
 	return mqtt.connect(connectUrl)
 }
 
