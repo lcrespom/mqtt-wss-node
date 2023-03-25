@@ -32,7 +32,7 @@ function post(msg) {
 		client.publish(topic, msg, error => {
 			if (error) console.error(error)
 			else console.log('Message posted')
-			process.exit(0)
+			client.end()
 		})
 	})
 }
