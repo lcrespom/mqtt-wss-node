@@ -1,6 +1,6 @@
 const mqtt = require('mqtt')
 
-const connectUrl = `mqtt://test.mosquitto.org`
+const connectUrl = `wss://test.mosquitto.org:8081`
 const topic = '/luis/test'
 
 function connect() {
