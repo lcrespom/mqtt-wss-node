@@ -1,0 +1,48 @@
+# IDEs / Editors
+# Intellij, See https://www.gitignore.io/api/intellij
+# User-specific stuff:
+.idea/dictionaries
+.idea/httpRequests
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+
+# Logs
+logs
+*.log
+
+# Secret Environment variables
+.env
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+*.stackdump
+package-lock.json
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Ignore built ts files
+dist/
+
+#Ignore artifacts folder
+artifacts/
+
+# Temporary files, e.g. code comparisons
+tmp/
+# For Mac users
+.DS_Store
